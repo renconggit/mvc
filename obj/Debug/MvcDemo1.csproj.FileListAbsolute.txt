@@ -50,3 +50,7 @@ E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\bin\zh-Hans\System.Web.Mvc.resources.dll
 E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\obj\Debug\MvcDemo1.csprojResolveAssemblyReference.cache
 E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\obj\Debug\MvcDemo1.dll
 E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\obj\Debug\MvcDemo1.pdb
+E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\bin\EntityFramework.dll
+E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\bin\EntityFramework.SqlServer.dll
+E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\bin\EntityFramework.xml
+E:\MVC\xiaoniumvc\MVCEF1\MvcDemo1\bin\EntityFramework.SqlServer.xml
