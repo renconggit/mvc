@@ -8,41 +8,43 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>详情</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-   
+    <div class="container">
 
-    <p>详情</p>
-    <dl>
-        <dt>
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
+        <p>详情</p>
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Username)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Username)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-    </dl>
-    <div>
-        @Html.ActionLink("编辑", "Edit", new { id = Model.ID }) |
-        @Html.ActionLink("返回列表", "Index")
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+        </dl>
+        <div>
+            @Html.ActionLink("编辑", "Edit", new { id = Model.ID }) |
+            @Html.ActionLink("返回列表", "Index")
 
+        </div>
     </div>
 </body>
 </html>

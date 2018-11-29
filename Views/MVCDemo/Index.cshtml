@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<h1>欢迎使用@@Html.Partial</h1>
+@Html.Partial("~/Views/Shared/_PartialPageWidget.cshtml")
+<h1>使用@Html.RenderPartial</h1>
+@{
+    Html.RenderPartial("~/Views/Shared/_PartialPageWidget.cshtml");
+}
+<h2>后台调用@@Html.Action</h2>
+@Html.Action("ShowWidget")
+<h2>后台调用@@Html.RenderAction</h2>
+@{Html.RenderAction("ShowWidget");}
+

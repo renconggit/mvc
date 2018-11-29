@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcDemo1.Models.SysUser
 @{
     Layout = null;
 }
@@ -8,10 +8,40 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
+    <title>Create</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div> 
+    <div class="container">
+        <h5>编辑</h5>
+        @using (Html.BeginForm("Edit", "Account", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+            @Html.HiddenFor(m=>m.ID)            
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">@Html.LabelFor(model => model.Username)：</label>
+                <div class="col-sm-10">
+                    @Html.EditorFor(x => x.Username, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">@Html.LabelFor(model => model.Email)：</label>
+                <div class="col-sm-10">
+                    @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">@Html.LabelFor(model => model.Password)：</label>
+                <div class="col-sm-10">
+                    @*@Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "form-control" ,type="password"} })*@
+                    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">编辑</button>
+                </div>
+            </div>
+        }
     </div>
 </body>
 </html>

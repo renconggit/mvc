@@ -8,11 +8,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
+    <title>创建</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-   
     <div class="container">
         <h5>创建</h5>
         @using (Html.BeginForm("Create", "Account", FormMethod.Post, new { @class = "form-horizontal" }))
@@ -33,9 +32,8 @@
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">@Html.LabelFor(model => model.Password)：</label>
                 <div class="col-sm-10">
-                    @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "form-control" ,type="password"} })
+                    @*@Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "form-control" ,type="password"} })*@
                     @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
-                    
                 </div>
             </div>
             <div class="form-group">

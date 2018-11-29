@@ -9,21 +9,27 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <table>
-        <tr>
-            <th>@Html.DisplayNameFor(model=>model.Username)</th>
-            <th>@Html.DisplayNameFor(model => model.Email)</th>
-            <th></th>
-        </tr>
-        @foreach (var m in Model) { 
-        <tr>
-            <td>@Html.DisplayFor(ms=>m.Username)</td>
-            <td>@Html.DisplayFor(ms => m.Email)</td>
-            <td>@Html.ActionLink("Details", "Details",new { id=m.ID})</td>
-        </tr>
-        }
-    </table>
+    <div class="container">
+        <span>@Html.ActionLink("创建", "Create", "Account", new { @class = "" })</span>
+        <table>
+
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Username)</th>
+                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                <th></th>
+            </tr>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(ms => m.Username)</td>
+                    <td>@Html.DisplayFor(ms => m.Email)</td>
+                    <td>@Html.ActionLink("Details", "Details", new { id = m.ID })|@Html.ActionLink("Edit", "Edit", new { id = m.ID })|@Html.ActionLink("Delete", "Delete", new { id = m.ID })</td>
+                </tr>
+            }
+        </table>
+    </div>
 </body>
 </html>
